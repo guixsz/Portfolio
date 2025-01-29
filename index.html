@@ -7,7 +7,36 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
-<body>
-    
+<body>  
+    <nav id="desktop-nav">
+        <div class="logo">Gui Santana</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About me</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburguer-nav">
+        <div class="logo">Gui Santana</div>
+        <div class="hamburguer-menu">
+            <div class="hamburguer-icon" onclick="tooglemenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <ul class="nav-links">
+                    <li><a href="#about" onclick="tooglemenu()">About me</a></li>
+                    <li><a href="#experience" onclick="tooglemenu()">Experience</a></li>
+                    <li><a href="#projects" onclick="tooglemenu()">Projects</a></li>
+                    <li><a href="#contact" onclick="tooglemenu()">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <script src="script.js"></script>
 </body>
 </html>
