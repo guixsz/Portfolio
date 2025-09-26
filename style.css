@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    list-style: none;
+    text-decoration: none;
 }
 
 html {
@@ -19,7 +21,7 @@ html {
 }
 
 body {
-    background-color: var(--escuro);
+    background-color: var(--maisEscuro);
     color: var(--claro);
 }
 
@@ -44,6 +46,7 @@ body {
     color: var(--claro);
     font-weight: 500;
     position: relative;
+    width: 100%;
     padding-inline: 0.5rem 0;
 }
 
@@ -62,31 +65,309 @@ body {
     width: 100%;
 }
 
-.cabecalho {
+.principal {
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
+    justify-content: center;
+}
+
+.cabecalho {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 12rem;
+    margin-bottom: 6rem;
 }
 
 .foto-perfil {
-    width: 450px;
-    height: 450px;
+    width: 350px;
+    height: 350px;
     box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
     border-radius: 50%;
     border: 4px solid var(--vidro);
+    animation: flutuar 5s ease-in-out infinite;
+    cursor: pointer;
 }
 
 h1 {
     font-size: 3.5rem;
     color: var(--primaria);
     font-weight: bold;
-    margin: 20px;
 }
 
-.cabecalho-subt-titulo {
+.particulas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background:
+    radial-gradient(circle at 1% 15%, var(--primaria) 0%, transparent 15%),
+    radial-gradient(circle at 95% 85%, var(--secundaria) 0%, transparent 15%),
+    var(--maisEscuro);
+}
+
+.inicio-titulo {
+    text-align: center;
+}
+
+.inicio-icon {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+    gap: 1rem
+}
+
+.link-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, var(--primaria,), var(--secundaria));
+    box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
+    color: var(--claro);
+    transition: all 0.2s;
+}
+
+.link-icon:hover {
+    transform: translateY(-5px);
+    background: var(--escuro);
+    border: 1px solid var(--vidro);
+}
+
+.cabecalho-sub-titulo {
     font-size: 2rem;
     color: var(--claro);
+    font-weight: 700;
+    position: relative;
+    transition: all 0.5s ease;
+    text-align: center;
+    width: 620px;
 }
 
+.cabecalho-sub-titulo::before {
+    content: '';
+    animation: palavras 20s infinite;
+}
+
+.cabecalho-sub-titulo::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    border-left: 2px solid var(--primaria);
+    right: -8px;
+    animation: cursor 0.8s infinite, digita 20s steps(70) infinite;
+    width: calc(100% + 20px);
+    background-color: var(--maisEscuro);
+}
+
+.lista-tecnologia {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.inicio-imagem {
+    width: 50px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
+    border: 4px solid var(--vidro);
+    transition: ease 0.3s;
+}
+
+.inicio-imagem:hover {
+    transform: translateY(-5px);
+}
+
+.sobre {
+    padding: 3rem;
+    margin: 6rem 0;
+}
+
+.sobre-titulo {
+    font-size: 3rem;
+    color: var(--claro);
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.sobre-caixa {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 16px;
+    border: 1px solid var(--vidro);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.sobre-paragrafo {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.projetos {
+    padding: 6rem 2rem;
+
+}
+
+.projetos-titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 6rem;
+}
+
+.projetos-caixa {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projetos-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--vidro);
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.projetos-card:hover {
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
+    transform: translateY(-10px) scale(1.03);
+}
+
+.projetos-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+
+}
+
+.projetos-textos {
+    padding: 1.5rem;
+}
+
+.projetos-info {
+    margin-bottom: 5px;
+}
+
+.projetos-paragrafos {
+    color: rgba(226, 232, 240, 0.8);
+    line-height: 1.25rem;
+}
+
+.contatos {
+    padding: 6rem 2rem;
+}
+
+.contatos-titulo {
+    text-align: center;
+    margin-bottom: 6rem;
+    font-size: 2.5rem;
+}
+
+.contatos-formulario {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--vidro);
+    border-radius: 16px;
+    padding: 2rem;
+}
+
+.group-form {
+    margin-bottom: 1.5rem;
+}
+
+.campo-form {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    color: var(--claro);
+    border: 1px solid var(--vidro);
+    outline: none;
+
+}
+
+.campo-form:focus {
+    border-color: var(--secundaria);
+    box-shadow: 0 0 10px rgba(79, 70, 229, 0.3);
+}
+
+.botao-form {
+    color: var(--claro);
+    background: linear-gradient(45deg, var(--primaria,), var(--secundaria));
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+
+.botao-form:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px rgba(79, 79, 299, 0.4);
+}
+
+@keyframes flutuar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-35px)
+    }
+}
+
+@keyframes palavras {
+    0%, 20% {
+        content: 'Desenvolvedor BackEnd'
+    }
+
+    21%, 40% {
+        content: 'Sistemas Robustos e escaláveis'
+    }
+
+    41%, 60% {
+        content: 'Código limpo'
+    }
+
+    61%, 80% {
+        content: 'Análise e Desenvolvimento de Sistemas'
+    }
+
+    81%, 100% {
+        content: 'Salvador - Bahia'
+    }
+}
+
+@keyframes cursor {
+    0% {
+        border-left: 2px solid (var(--maisEscuro))
+    }
+}
+
+@keyframes digita {
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
+        width: 0;
+    }
+
+    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
+        width: calc(100% + 20px);
+    }
+}

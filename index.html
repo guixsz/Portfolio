@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <div class="particulas"></div>
+
     <nav class="navegacao">
         <ul class="menu">
             <li><a href="#inicio" class="menu-link">Inicio</a></li>
@@ -16,43 +21,61 @@
         </ul>
     </nav>
 
-    <main id="#inicio" class="cabecalho">
-        <img src="" alt="" class="foto-perfil">
-        <h1>Guilherme Santana</h1>
-        <p class="cabecalho-subt-titulo">Desenvolvedor Back End</p>
+    <main id="inicio" class="principal">
+        <div class="cabecalho">
+            <div class="inicio-texto">
+                <h1 class="inicio-titulo">Guilherme Santana</h1>
+                <p class="cabecalho-sub-titulo"></p>
+                <div class="inicio-icon">
+                    <a href="https://www.instagram.com/guiszw/" target="_blank" class="link-icon"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/in/guilherme-santana-350164222/" target="_blank" class="link-icon"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/guixsz" target="_blank" class="link-icon"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            <img src="" alt="" class="foto-perfil">
+        </div>
+        <div class="inicio-tecnologia">
+            <ul class="lista-tecnologia">
+                <li class="inicio-lista"><img src="/image/Logo_Java_Com_Fundo.png" alt="Java" class="inicio-imagem"></li>
+                <li class="inicio-lista"><img src="/image/Logo_PHP_Fundo_Forte.png" alt="PHP" class="inicio-imagem"></li>
+                <li class="inicio-lista"><img src="/image/Logo_Verde_Com_Fundo.png" alt="Spring" class="inicio-imagem"></li>
+                <li class="inicio-lista"><img src="image/js.png" alt="JavaScript" class="inicio-imagem"></li>
+            </ul>
+        </div>
     </main>
 
     <section id="sobre" class="sobre">
         <h2 class="sobre-titulo">Sobre mim</h2>
         <div class="sobre-caixa">
-            <p class="sobre-paragrafo">Olá! Sou Desenvolvedor Back-end, atuo com web utilizando Java Spring e suas tecnologias</p>
+            <p class="sobre-paragrafo">Olá! Sou Desenvolvedor Back-end, desenvolvo aplicações tanto desktop como Web com Java, PHP. Atualmente curso graduação em Análise e Desenvolvimento de Sistemas, atuo como desenvolvedor freelancer, no qual crio e dou manutenção para sistemas do mercado</p>
         </div>
     </section>
 
     <section id="projetos" class="projetos">
-        <h2>Meus projetos</h2>
-
+        <h2 class="projetos-titulo">Meus projetos</h2>
         <div class="projetos-caixa">
             <div class="projetos-card">
-                <img src="" alt="Projeto 1" class="projetos-image">
-                <h3 class="projetos-info">Projeto 1</h3>
-                <p class="projetos-paragrafos">Descrição do projeto 1</p>
+                <img src="image/projetoNlw.png" alt="Projeto 1" class="projetos-image"> 
+                <div class="projetos-textos">
+                    <h3 class="projetos-info">Assistente Gamer</h3>
+                    <p class="projetos-paragrafos">Projeto integrado com Inteligência Artifical da Gemini, feito com JavaScript, para auxiliar sobre duvidas nos jogos CS2, League of Legends, Valorant</p>
+                </div>
             </div>
-        </div>
 
-        <div class="projetos-caixa">
             <div class="projetos-card">
-                <img src="" alt="Projeto 2" class="projetos-image">
-                <h3 class="projetos-info">Projeto 2</h3>
-                <p class="projetos-paragrafos">Descrição do projeto 2</p>
+                <img src="image/videoPlay.png" alt="Projeto 2" class="projetos-image">
+                <div class="projetos-textos">
+                    <h3 class="projetos-info">Video play</h3>
+                    <p class="projetos-paragrafos">Site para cadastro de videos do youtube, com login para garantir segurança a aplicação, totalmente feito com php nativo</p>
+                </div>
             </div>
-        </div>
 
-        <div class="projetos-caixa">
             <div class="projetos-card">
                 <img src="" alt="Projeto 3" class="projetos-image">
-                <h3 class="projetos-info">Projeto 3</h3>
-                <p class="projetos-paragrafos">Descrição do projeto 3</p>
+                <div class="projetos-textos">
+                    <h3 class="projetos-info">Projeto 3</h3>
+                    <p class="projetos-paragrafos">Descrição do projeto 3</p>
+                </div>
             </div>
         </div>
     </section>
@@ -60,12 +83,13 @@
     <section id="contatos" class="contatos">
         <h2 class="contatos-titulo">Contatos</h2>
         <form class="contatos-formulario" id="formulario">
-            <div class="nome-form">
-                <input placeholder="Nome" class="form-campo">
+            <div class="group-form">
+                <input placeholder="Nome" class="campo-form">
             </div>
             <div class="group-form">
-                <input placeholder="Digite sua mensagem" class="form-campo">
+                <textarea class="campo-form" placeholder="Digite sua mensagem"></textarea>
             </div>
+            <button type="submit" class="botao-form">Enviar</button>
         </form>
     </section>
 </body>
