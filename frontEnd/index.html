@@ -36,10 +36,10 @@
         </div>
         <div class="inicio-tecnologia">
             <ul class="lista-tecnologia">
-                <li class="inicio-lista"><img src="/image/Logo_Java_Com_Fundo.png" alt="Java" class="inicio-imagem"></li>
-                <li class="inicio-lista"><img src="/image/Logo_PHP_Fundo_Forte.png" alt="PHP" class="inicio-imagem"></li>
-                <li class="inicio-lista"><img src="/image/Logo_Verde_Com_Fundo.png" alt="Spring" class="inicio-imagem"></li>
-                <li class="inicio-lista"><img src="image/js.png" alt="JavaScript" class="inicio-imagem"></li>
+                <li class="inicio-lista"><img src="/frontEnd/image/Logo_Java_Com_Fundo.png" alt="Java" class="inicio-imagem"></li>
+                <li class="inicio-lista"><img src="/frontEnd/image/Logo_PHP_Fundo_Forte.png" alt="PHP" class="inicio-imagem"></li>
+                <li class="inicio-lista"><img src="/frontEnd/image/Logo_Verde_Com_Fundo.png" alt="Spring" class="inicio-imagem"></li>
+                <li class="inicio-lista"><img src="/frontEnd/image/js.png" alt="JavaScript" class="inicio-imagem"></li>
             </ul>
         </div>
     </main>
@@ -81,16 +81,28 @@
     </section>
 
     <section id="contatos" class="contatos">
-        <h2 class="contatos-titulo">Contatos</h2>
-        <form class="contatos-formulario" id="formulario">
+        <h2 class="contatos-titulo">Fale comigo!</h2>
+        <form class="contatos-formulario" id="form" action="">
             <div class="group-form">
-                <input placeholder="Nome" class="campo-form">
+                <label for="name" class="label-form">Nome</label>
+                <input placeholder="Nome" type="text" id="name" class="campo-form">
             </div>
             <div class="group-form">
-                <textarea class="campo-form" placeholder="Digite sua mensagem"></textarea>
+                <label for="email" class="label-form">Email</label>
+                <input placeholder="email" type="email" id="email" class="campo-form">
+            </div>
+            <div class="group-form">
+                <label for="number" class="label-form">Número</label>
+                <input placeholder="ex: 71988881111" type="text" id="number" class="campo-form">
+            </div>
+            <div class="group-form">
+                <label for="message" class="label-form">Mensagem</label>
+                <textarea class="campo-form" id="message" placeholder="Digite sua mensagem"></textarea>
             </div>
             <button type="submit" class="botao-form">Enviar</button>
         </form>
     </section>
+
+    <script src="scripts/connection.js"></script>
 </body>
 </html>

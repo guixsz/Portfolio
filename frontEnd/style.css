@@ -299,7 +299,12 @@ h1 {
     color: var(--claro);
     border: 1px solid var(--vidro);
     outline: none;
+    margin-top: 6px;
+}
 
+.label-form {
+    color: var(--claro);
+    font-size: 12px;
 }
 
 .campo-form:focus {
