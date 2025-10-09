@@ -1,0 +1,28 @@
+.error {
+    color: #dc2626;
+    font-size: 12px;
+    margin-top: 1px;
+    max-width: 200px;
+
+    display: none;
+}
+
+.group-form.invalid .error {
+    display: block;
+}
+
+.group-form.invalid .label-form {
+    color: #dc2626;
+}
+
+.group-form.invalid .campo-form {
+    border: 1px solid #dc2626;
+}
+
+.group-form.valid  .label-form {
+    color: #22c55e;
+}
+
+.group-form.valid .campo-form {
+    border: 1px solid #22c55e;
+}

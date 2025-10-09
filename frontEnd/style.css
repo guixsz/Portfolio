@@ -1,3 +1,5 @@
+@import url("error.css");
+ 
 * {
     margin: 0;
     padding: 0;
@@ -187,7 +189,7 @@ h1 {
 }
 
 .sobre {
-    padding: 3rem;
+    padding: 8rem;
     margin: 6rem 0;
 }
 
@@ -288,7 +290,7 @@ h1 {
 }
 
 .group-form {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .campo-form {
