@@ -7,11 +7,16 @@ const errorIcon = '<i class="fa-solid fa-circle-exclamation"></i>';
 
 form.addEventListener('submit', function(event) {
     event.preventDefault();
-    //createClient();
-    validation();
+    const isValid = validation();
+
+    if (isValid) {
+        createClient();
+    }
+    
 });
 
 function validation() {
+    const formIsValid = true;
     const fields = [
         {
             id: 'name',
@@ -44,7 +49,7 @@ function validation() {
         erroSpan.innerHTML = '';
 
         groupForm.classList.remove('invalid');
-        groupForm.classList.add('valid')
+        groupForm.classList.add('valid');
 
         const fieldValidator = field.validator(inputValue);
 
@@ -52,9 +57,12 @@ function validation() {
             erroSpan.innerHTML = `${errorIcon} ${fieldValidator.errorMessage}`;
             groupForm.classList.add('invalid');
             groupForm.classList.remove('valid');
-            return;
+            
+            formIsValid = false;
         }
     })
+
+    return formIsValid;
 }
 
 function isEmpty(value) {
@@ -186,6 +194,14 @@ function createClient() {
             console.log("Resposta de Sucesso do Back-end:", data);
             alert("Mensagem enviada com sucesso!");
             form.reset();
+
+            const validGroups = document.querySelectorAll('.group-form.valid');
+
+            setTimeout(function() {
+                validGroups.forEach(function(group) {
+                group.classList.remove('valid');
+                });
+            }, 3500);
         })
         .catch(function (error) {
             console.error("ERRO na Conexão/Requisição:", error);
