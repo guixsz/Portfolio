@@ -1,5 +1,6 @@
 @import url("error.css");
- 
+@import url("responsive.css");
+
 * {
     margin: 0;
     padding: 0;
