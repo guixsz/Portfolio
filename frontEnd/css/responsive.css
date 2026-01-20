@@ -28,7 +28,7 @@
     }
 
     .cabecalho {
-        flex-direction: column; /* Coloca a foto e o texto um em cima do outro */
+        flex-direction: column; 
         gap: 3rem;
         margin-bottom: 4rem;
     }
