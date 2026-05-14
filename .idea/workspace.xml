@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="112c37a4-c0be-4cdd-8d7b-3277b20ce8fb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/frontEnd/image/projects/task.png" afterDir="false" />
+    <list default="true" id="112c37a4-c0be-4cdd-8d7b-3277b20ce8fb" name="Changes" comment="feat: Added footer and technologies to the &quot;About Me&quot; section, and fixed some bugs.&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontEnd/css/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd/css/responsive.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontEnd/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontEnd/image/projects/projetoNlw.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontEnd/image/techs/Logo_Java_Com_Fundo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontEnd/image/techs/Logo_PHP_Fundo_Forte.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontEnd/image/techs/Logo_Verde_Com_Fundo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontEnd/image/techs/js.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontEnd/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontEnd/scripts/connection.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontEnd/scripts/connection.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +26,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
@@ -63,9 +56,22 @@
       <workItem from="1778587303684" duration="49000" />
       <workItem from="1778587365546" duration="9000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: Added footer and technologies to the &quot;About Me&quot; section, and fixed some bugs.&quot;">
+      <option name="closed" value="true" />
+      <created>1778757629689</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1778757629689</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: Added footer and technologies to the &quot;About Me&quot; section, and fixed some bugs.&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Added footer and technologies to the &quot;About Me&quot; section, and fixed some bugs.&quot;" />
   </component>
 </project>
