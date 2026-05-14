@@ -16,7 +16,7 @@ form.addEventListener('submit', function(event) {
 });
 
 function validation() {
-    const formIsValid = true;
+    let formIsValid = true;
     const fields = [
         {
             id: 'name',

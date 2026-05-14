@@ -1,125 +1,85 @@
-/* --- Início do Estilo Responsivo --- */
-/* Media Query para telas maiores que smartphones (ex: Tablets, Desktops menores) */
-@media (max-width: 1024px) {
-    .cabecalho {
-        gap: 6rem; /* Reduz o espaço entre o texto e a foto */
+@media (max-width: 850px) {
+    .sobre-mim {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
-    .foto-perfil {
-        width: 300px;
-        height: 300px;
-    }
-}
-
-/* Media Query para telas de tablets e dispositivos móveis maiores (max-width: 768px) */
-@media (max-width: 768px) {
-    .navegacao {
-        padding: 1rem;
+    .tech-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 1rem;
+        width: 100%;
     }
 
-    .menu {
-        gap: 1.5rem; /* Reduz o espaço entre os itens do menu */
-    }
-    
-    .principal {
-        padding: 4rem 2rem; /* Adiciona padding para evitar que o conteúdo toque as bordas */
-        /* Garante que o conteúdo não fique muito apertado no topo, por causa da nav fixa */
-        padding-top: 6rem; 
+    .tech-section {
+        justify-content: flex-start;
     }
 
-    .cabecalho {
-        flex-direction: column; 
-        gap: 3rem;
-        margin-bottom: 4rem;
-    }
-
-    /* AQUI ESTÁ O AJUSTE PRINCIPAL para garantir a ordem */
-    .inicio-texto {
-        order: 2; /* Move o texto para baixo da foto no layout vertical */
-    }
-    
-    .foto-perfil {
-        width: 250px;
-        height: 250px;
-        order: 1; /* Move a foto para cima do texto no layout vertical */
-    }
-    
-    /* ... (Resto dos estilos para 768px) ... */
-    h1 {
-        font-size: 2.5rem; /* Reduz o tamanho do título principal */
-    }
-
-    .cabecalho-sub-titulo {
-        font-size: 1.5rem; /* Reduz o tamanho do subtítulo */
-        width: 100%; /* Permite que o subtítulo use toda a largura disponível */
-    }
-    /* ... (Resto dos estilos para 768px) ... */
-    
     .projetos-caixa {
-        grid-template-columns: 1fr; 
-        max-width: 400px;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Media Query para smartphones (max-width: 480px) */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     .menu {
-        flex-direction: column; 
-        gap: 0.5rem;
-        text-align: center;
+        gap: 1rem;
     }
 
     .menu-link {
-        padding: 0.5rem 0;
+        font-size: 0.8rem;
     }
-    
-    h1 {
-        font-size: 2rem; /* Reduz ainda mais o título principal */
+
+    .sobre-mim {
+        grid-template-columns: 1fr !important;
+        gap: 2rem;
+        text-align: center;
     }
-    
-    /* Novo ajuste de tamanho para a foto em smartphones */
-    .foto-perfil {
-        width: 180px;
-        height: 180px;
+
+    .cabecalho {
+        flex-direction: column;
+        text-align: center;
     }
-    
-    .cabecalho-sub-titulo {
-        font-size: 1.2rem;
+
+    .inicio-texto {
+        padding: 0 1rem;
+    }
+
+    .inicio-icon {
+        justify-content: center;
+    }
+
+    .sobre {
+        padding: 2rem 1rem;
+    }
+
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projetos-caixa {
+        grid-template-columns: 1fr;
+    }
+
+    .inicio-titulo {
+        font-size: 2rem;
     }
 }
 
-/* Media Query para smartphones (max-width: 480px) */
 @media (max-width: 480px) {
-    .menu {
-        flex-direction: column; /* Coloca os itens do menu em coluna */
-        gap: 0.5rem; /* Espaçamento menor entre os itens do menu */
-        text-align: center;
-        box-sizing: border-box;
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .menu-link {
-        padding: 0.5rem 0;
+    .principal {
+        margin-top: 6rem;
     }
-    
-    h1 {
-        font-size: 2rem; /* Reduz ainda mais o título principal */
+
+    .tech-grid-item {
+        padding: 1rem 0.5rem;
     }
-    
+
     .foto-perfil {
-        width: 200px;
-        height: 200px;
-    }
-    
-    .cabecalho-sub-titulo {
-        font-size: 1.2rem;
-    }
-
-    .lista-tecnologia {
-        gap: 1rem; /* Reduz o espaço entre as logos */
-        flex-wrap: wrap; /* Permite que as logos quebrem a linha se necessário */
-    }
-    
-    .inicio-imagem {
-        width: 30px; /* Reduz o tamanho da logo */
+        width: 140px;
+        height: 140px;
     }
 }
